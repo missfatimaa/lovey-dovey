@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Happy Valentine Ghazaleh 💖👀!</title>
     <link rel="icon" type="image/jpg" href="favicon.jpg" />
     <link rel="stylesheet" href="style.css" />
@@ -77,24 +77,24 @@
           image = $("#image");
         body.removeClass("no").removeClass("maybe");
         image.removeClass("benefits").removeClass("certificate");
-        var answer = prompt(
-          "Will you be my valentine? Yes, No, Maybe?"
-        ).toLowerCase();
+        var answer = prompt("Will you be my valentine? Yes, No?").toLowerCase();
         /* .toLowerCase IS BEST PRACTICE! IT'S ALSO OK IF YOU TYPE THE FIRST LETTER INSTEAD OF THE WORD! */
         if (answer == "yes" || answer == "y") {
           Btn.addClass("button");
           body.addClass("yes");
           image.addClass("certificate");
-        } else if (answer == "maybe" || answer == "m") {
-          body.addClass("maybe");
-          /* I WANTED THE BG TO CHANGE BEFORE THE ALERT AND THE IMAGE AFTER THE PROMPT AND THE NEXT PROMPT AFTER THAT! I LEARNED THAT IF ALERT AD IMAGE ARE NOT IN THE setTimeout TOGETHER, IT DOES THEM AT THE SAME TIME. */
-          setTimeout(beardedBoo, 6000);
-          setTimeout(function () {
-            alert("look at these faces..don't you want them to find their soulmates?🥺💞");
-            image.addClass("benefits");
-          }, 200);
-          /* HEY!!! */
-        } else {
+        }
+        // else if (answer == "maybe" || answer == "m") {
+        //   body.addClass("maybe");
+        //   /* I WANTED THE BG TO CHANGE BEFORE THE ALERT AND THE IMAGE AFTER THE PROMPT AND THE NEXT PROMPT AFTER THAT! I LEARNED THAT IF ALERT AD IMAGE ARE NOT IN THE setTimeout TOGETHER, IT DOES THEM AT THE SAME TIME. */
+        //   setTimeout(beardedBoo, 6000);
+        //   setTimeout(function () {
+        //     alert("look at these faces..don't you want them to find their soulmates?🥺💞");
+        //     image.addClass("benefits");
+        //   }, 200);
+        //   /* HEY!!! */
+        // }
+        else {
           body.addClass("no");
           setTimeout(function () {
             alert("Say it isn't so. Please try again.");
